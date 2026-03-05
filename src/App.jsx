@@ -50,14 +50,25 @@ const App = () => {
   const onSendData = useCallback(async () => {
     const queryId = telegram.initDataUnsafe?.query_id;
 
-    await axios.post(
-      "https://myoshxonatelegramwebapp-73389b9cb104.herokuapp.com/web-data",
-      { products: cartItems, queryId },
-    );
+    try {
+      telegram.MainButton.showProgress();
 
-    if (queryId) {
-    } else {
-      telegram.sendData(JSON.stringify(cartItems));
+      if (queryId) {
+        await axios.post(
+          "https://myoshxonatelegramwebapp-73389b9cb104.herokuapp.com/web-data",
+          { products: cartItems, queryId },
+        );
+        telegram.close();
+      } else {
+        telegram.sendData(JSON.stringify(cartItems));
+      }
+    } catch (error) {
+      console.error("So'rov yuborishda xatolik:", error);
+      telegram.showAlert(
+        "Xaridingizni amalga oshirishda xatolik yuz berdi. Iltimos qayta urinib ko'ring.",
+      );
+    } finally {
+      telegram.MainButton.hideProgress();
     }
   }, [cartItems]);
 
