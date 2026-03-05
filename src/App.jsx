@@ -3,6 +3,7 @@ import { getData } from "./constants/db";
 import Card from "./components/card/Card";
 import "./App.css";
 import Cart from "./components/cart/Cart";
+import axios from "axios";
 
 const courses = getData();
 const telegram = window.Telegram.WebApp;
@@ -46,8 +47,15 @@ const App = () => {
     telegram.MainButton.show();
   };
 
-  const onSendData = useCallback(() => {
-    telegram.sendData(JSON.stringify(cartItems));
+  const onSendData = useCallback(async () => {
+    const queryId = telegram.initDataUnsafe?.query_id;
+
+    await axios.post("API", { products: cartItems, queryId });
+
+    if (queryId) {
+    } else {
+      telegram.sendData(JSON.stringify(cartItems));
+    }
   }, [cartItems]);
 
   useEffect(() => {
