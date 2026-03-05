@@ -50,7 +50,10 @@ const App = () => {
   const onSendData = useCallback(async () => {
     const queryId = telegram.initDataUnsafe?.query_id;
 
-    await axios.post("API", { products: cartItems, queryId });
+    await axios.post(
+      "https://myoshxonatelegramwebapp-73389b9cb104.herokuapp.com/web-data",
+      { products: cartItems, queryId },
+    );
 
     if (queryId) {
     } else {
