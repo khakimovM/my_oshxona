@@ -4,6 +4,7 @@ import Card from "./components/card/Card";
 import "./App.css";
 import Cart from "./components/cart/Cart";
 import axios from "axios";
+import Particles from "./Particlec";
 
 const courses = getData();
 const telegram = window.Telegram.WebApp;
@@ -79,22 +80,54 @@ const App = () => {
   }, [onSendData]);
 
   return (
-    <>
-      <h1 className="heading">My oshxona</h1>
-      <Cart cartItems={cartItems} onCheckout={onCheckout} />
-      <div className="cards_container">
-        {courses.map((course) => {
-          return (
-            <Card
-              key={course.id}
-              course={course}
-              onAddItem={onAddItem}
-              onRemoveItem={onRemoveItem}
-            />
-          );
-        })}
+    <div
+      style={{
+        width: "100%",
+        minHeight: "100vh",
+        height: "100%",
+        position: "relative",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+        }}
+      >
+        <Particles
+          particleColors={["#ffffff"]}
+          particleCount={500}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover
+          alphaParticles={false}
+          disableRotation={false}
+          pixelRatio={1}
+        />
       </div>
-    </>
+
+      <div style={{ position: "relative", zIndex: 1, padding: "20px" }}>
+        <h1 className="heading">My oshxona</h1>
+        <Cart cartItems={cartItems} onCheckout={onCheckout} />
+        <div className="cards_container">
+          {courses.map((course) => {
+            return (
+              <Card
+                key={course.id}
+                course={course}
+                onAddItem={onAddItem}
+                onRemoveItem={onRemoveItem}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 };
 
