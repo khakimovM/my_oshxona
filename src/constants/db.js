@@ -1,52 +1,52 @@
 export function getData() {
   return [
     {
-      title: "JavaScript",
-      price: 17.99,
+      title: "Burger",
+      price: 5.9,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2F3gf746AKRbWNjB8OCoEB&w=3840&q=75",
+        "https://i.pinimg.com/736x/e2/29/ef/e229efd0283d5f4d8df255d10fc9833f.jpg",
       id: 1,
     },
     {
-      title: "ReactJS",
-      price: 15,
+      title: "Longer",
+      price: 6.5,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2F65rcPxsLT9ysJDisXF80&w=3840&q=75",
+        "https://i.pinimg.com/1200x/e7/a1/2f/e7a12f0b8e4ce876273e237bea94eb5c.jpg",
       id: 2,
     },
     {
-      title: "VueJS",
-      price: 13.5,
+      title: "Taco",
+      price: 7.2,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2F54vR0DStGoFuZBVkFwWQ&w=3840&q=75",
+        "https://i.pinimg.com/1200x/70/48/67/7048672a3c4f7d1d3e1799841f881b46.jpg",
       id: 3,
     },
     {
-      title: "NodeJS",
-      price: 13.99,
+      title: "Chill Hot Dog",
+      price: 5,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FmDcwhbguQpyM74jb18M5&w=3840&q=75",
+        "https://i.pinimg.com/736x/f8/d4/0e/f8d40e5aa7296a2158edf0cfa1d9ba64.jpg",
       id: 4,
     },
     {
-      title: "NestJS",
+      title: "Burger set",
       price: 12.5,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FxN7aKkLMQUuD72ikvC1H&w=3840&q=75",
+        "https://i.pinimg.com/736x/49/56/ea/4956eab9dcc963b5b31b478f3619586a.jpg",
       id: 5,
     },
     {
-      title: "NextJS",
+      title: "Burger set",
       price: 12.99,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FPe94ubZPSCHgXDIPBxTr&w=3840&q=75",
+        "https://i.pinimg.com/736x/49/56/ea/4956eab9dcc963b5b31b478f3619586a.jpg",
       id: 6,
     },
     {
-      title: "TensorflowJS",
-      price: 28.99,
+      title: "Klab Sendvich",
+      price: 8.5,
       Image:
-        "https://sammi.ac/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2FtIMgibghQveiDeJeXDPI&w=3840&q=75",
+        "https://i.pinimg.com/736x/0e/76/0b/0e760b63f4e17f7a73c4fc91a6afde03.jpg",
       id: 8,
     },
   ];

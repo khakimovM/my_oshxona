@@ -40,6 +40,11 @@
 .image_container img {
   width: 100%;
   object-fit: cover;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.image_container img:hover {
+  scale: 1.015;
 }
 
 .card_body {

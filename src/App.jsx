@@ -80,7 +80,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className="heading">Sammi kurslari</h1>
+      <h1 className="heading">My oshxona</h1>
       <Cart cartItems={cartItems} onCheckout={onCheckout} />
       <div className="cards_container">
         {courses.map((course) => {
